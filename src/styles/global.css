@@ -1,18 +1,25 @@
-@import './reset.css';
-@import './variables.css';
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap');
+@import "./reset.css";
+@import "./variables.css";
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700&display=swap");
 
 @font-face {
-  font-family: 'NeoDunggeunmo Pro';
-  src: url('../assets/fonts/NeoDunggeunmoPro.woff2') format('woff2');
+  font-family: "NeoDunggeunmo Pro";
+  src: url("@assets/fonts/NeoDunggeunmoPro-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Gothic A1', Arial, Helvetica, sans-serif;
+  font-family: "Gothic A1", Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 1200px;
+  padding: 0 15px;
 }
 
 .pixel {
-  font-family: 'NeoDunggeunmo Pro', cursive, Arial, Helvetica, sans-serif;
+  font-family: "NeoDunggeunmo Pro", cursive, Arial, Helvetica, sans-serif;
+}
+.visually-hidden {
+  display: none;
 }

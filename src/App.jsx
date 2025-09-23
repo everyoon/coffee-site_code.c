@@ -1,6 +1,7 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import MainLayout from './components/layout/MainLayout';
-import Home from './pages/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./components/layout/MainLayout";
+import Home from "./pages/Home";
+import ComingSoon from "./pages/CommingSoon";
 // import MyPage from './pages/MyPage';
 // import Menu from './pages/Menu';
 // import CustomMenu from './pages/CustomMenu';
@@ -15,6 +16,14 @@ function App() {
           {/* <Route path="/mypage" element={<MyPage />} /> */}
           {/* <Route path="/menu" element={<Menu />} /> */}
           {/* <Route path="/custom-menu" element={<CustomMenu />} /> */}
+          <Route path="/cart" element={<ComingSoon />} />
+          <Route path="/location" element={<ComingSoon />} />
+          <Route path="/customer-center" element={<ComingSoon />} />
+          <Route path="/store" element={<ComingSoon />} />
+          <Route path="/program" element={<ComingSoon />} />
+          <Route path="/event&news" element={<ComingSoon />} />
+          <Route path="/about-us" element={<ComingSoon />} />
+
           {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </MainLayout>

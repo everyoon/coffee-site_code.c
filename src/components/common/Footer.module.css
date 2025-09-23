@@ -1,0 +1,131 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--black);
+}
+.top {
+  padding: 70px 0;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right {
+  color: var(--white);
+}
+.infoDetail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-bottom: 80px;
+}
+.infoBox {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 24px);
+  gap: 8px;
+}
+.infoBox p:first-child {
+  font-weight: 500;
+}
+.newsletter {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--gray);
+  border-radius: 12px;
+}
+.newsletterLeft {
+  width: calc(100% - 100px);
+}
+.newsletterLeft input {
+  width: 100%;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--gray);
+  border-radius: 12px 0 0 0;
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.28;
+  font-weight: 600;
+}
+.inputField.error {
+  color: var(--accent);
+}
+
+.errorMessage {
+  color: var(--accent);
+  padding-top: 4px;
+  font-size: 13px;
+}
+
+.sendBtn {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 32px;
+}
+.sendBtn svg {
+  width: 16px;
+  height: 16px;
+}
+.sendBtn p {
+  font-size: 16px;
+  line-height: 1.28;
+  font-weight: 600;
+}
+.newsletterRight {
+  width: 100px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  border-radius: 0 10px 10px 0;
+}
+.newsletterRight img {
+  width: 80%;
+}
+.bottom {
+  color: var(--white);
+  width: 100%;
+  border-top: 2px solid var(--white);
+  padding: 24px 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.nav ul {
+  display: flex;
+  gap: 16px;
+}
+.copyright {
+  font-weight: 400;
+}
+.linkBox {
+  display: flex;
+  gap: 16px;
+}
+.linkBox li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.linkBox li::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background: var(--white);
+  border-radius: 4px;
+}
+.linkBox li:last-child::after {
+  display: none;
+}
