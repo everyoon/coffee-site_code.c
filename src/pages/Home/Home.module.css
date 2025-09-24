@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url("../../assets/images/main_visual.jpg") no-repeat center/cover;
+  background: url('../../assets/images/main_visual.jpg') no-repeat center/cover;
 }
 
 .leftText,
@@ -25,19 +25,23 @@
   right: 62px;
   top: 45%;
 }
+
 .leftCode,
 .rightCode {
   width: 200px;
   position: absolute;
 }
+
 .leftCode {
   top: 20%;
   left: 62px;
 }
+
 .rightCode {
   bottom: 15%;
   right: 62px;
 }
+
 .titleWrapper {
   width: 100%;
   color: var(--white);
@@ -46,12 +50,34 @@
   line-height: 1.2;
   position: absolute;
   text-align: center;
-  bottom: 2%;
+  bottom: 5%;
 }
 
 .titleWrapper h1 {
-  padding: 8px 0;
+  padding: 12px 0;
 }
 
-.titleWrapper span {
+/* 애니메이션 css */
+.titleHidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.titleVisible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.codeHidden {
+  opacity: 0;
+  transform: scale(0.8) translateY(20px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.codeVisible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
