@@ -1,0 +1,31 @@
+.cursorContainer {
+  pointer-events: none;
+  position: fixed;
+  display: block;
+  border-radius: 0;
+  transform-origin: center center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  filter: url("#goo");
+}
+
+.dot {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #3d1e01;
+  transform-origin: center center;
+}
+
+header:hover ~ .cursorContainer,
+footer:hover ~ .cursorContainer {
+  display: none;
+}
+
+header:hover,
+footer:hover {
+  cursor: auto;
+}

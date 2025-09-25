@@ -1,0 +1,10 @@
+.button {
+  border-radius: 32px;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px 0 rgba(32, 32, 32, 0.1);
+  transition: all 0.2s ease;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}

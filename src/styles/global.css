@@ -10,6 +10,7 @@
 }
 
 body {
+  background: var(--white);
   font-family: "Gothic A1", Arial, Helvetica, sans-serif;
 }
 .container {

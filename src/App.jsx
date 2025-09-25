@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainLayout from "./components/layout/MainLayout";
+import CustomCursor from "./components/CustomCursor/CustomCursor";
 import Home from "./pages/Home";
 import ComingSoon from "./pages/CommingSoon";
 // import MyPage from './pages/MyPage';
@@ -10,6 +11,7 @@ import ComingSoon from "./pages/CommingSoon";
 function App() {
   return (
     <BrowserRouter>
+      <CustomCursor />
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />

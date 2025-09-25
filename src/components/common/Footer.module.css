@@ -54,6 +54,9 @@
   line-height: 1.28;
   font-weight: 600;
 }
+.newsletterLeft span svg path {
+  stroke: var(--white);
+}
 .inputField.error {
   color: var(--accent);
 }

@@ -1,0 +1,198 @@
+/* ProductArea.module.css */
+
+.product_area {
+  width: 577px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* 컨테이너가 보일 때 */
+.container_visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 개별 제품 아이템 기본 상태 */
+.product_item {
+  position: relative;
+  opacity: 0;
+  transform: translateY(80px) scale(0.8);
+  filter: blur(5px);
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 아이템이 보일 때 */
+.item_visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.product_item:hover img {
+  filter: brightness(1.05) saturate(1.1);
+}
+
+/* 기존 제품별 스타일 유지 */
+.been {
+  position: relative;
+}
+
+.been img {
+  width: 228px;
+}
+
+.dripPot {
+  align-self: flex-end;
+  position: relative;
+}
+
+.dripPot img {
+  width: 253px;
+  transform: rotate(-52.267deg);
+}
+
+.dripper {
+  position: relative;
+}
+
+.dripper img {
+  width: 236px;
+}
+
+.glassServer {
+  position: relative;
+}
+
+.glassServer img {
+  width: 217px;
+}
+
+/* 기존 버튼 위치 유지 */
+.been button {
+  position: absolute;
+  top: 50%;
+  left: 174px;
+  transform: translate(-50%, -50%);
+}
+
+.dripPot button {
+  position: absolute;
+  top: 30%;
+  left: 206px;
+  transform: translate(-50%, -50%);
+}
+
+.dripper button {
+  position: absolute;
+  top: 53%;
+  left: 122px;
+  transform: translate(-50%, -50%);
+}
+
+.glassServer button {
+  position: absolute;
+  top: 42%;
+  left: 145px;
+  transform: translate(-50%, -50%);
+}
+
+/* 버튼 애니메이션 */
+.product_item button {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.item_visible button {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.product_item button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.product_item img {
+  transition: all 0.3s ease;
+}
+
+.product_item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.product_item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.product_item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.product_item:nth-child(4) {
+  transition-delay: 0.7s;
+}
+
+/* 성능 최적화 */
+.product_area {
+  will-change: transform, opacity;
+}
+
+.product_item {
+  will-change: transform, opacity, filter;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .product_area {
+    width: 100%;
+    max-width: 400px;
+    gap: 16px;
+    padding: 0 20px;
+  }
+
+  .been img,
+  .dripPot img,
+  .dripper img,
+  .glassServer img {
+    width: 80% !important;
+  }
+
+  .been button {
+    left: 80%;
+  }
+  .dripPot button {
+    left: 80%;
+  }
+  .dripper button {
+    left: 70%;
+  }
+  .glassServer button {
+    left: 75%;
+  }
+}
+
+/* 접근성 */
+@media (prefers-reduced-motion: reduce) {
+  .product_area,
+  .product_item,
+  .product_item img,
+  .product_item button {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .container_visible,
+  .item_visible {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
+
+.product_item:focus-within {
+  transform: translateY(-8px) scale(1.02);
+  outline-offset: 4px;
+  border-radius: 12px;
+}

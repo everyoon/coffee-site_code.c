@@ -2,6 +2,7 @@ import styles from "./Footer.module.css";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import symbol from "@assets/images/stamp.png";
+import { Icons } from "./Icons";
 
 export default function Footer() {
   const [hasError, setHasError] = useState(false);
@@ -79,23 +80,7 @@ export default function Footer() {
                 <div className={styles.sendBtn} onClick={handleSubscribe}>
                   <span>Subscribe to our newsletter</span>
                   <span>
-                    <svg
-                      className="w-6 h-6 text-gray-800 dark:text-white"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke="currentColor"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="m9 5 7 7-7 7"
-                      />
-                    </svg>
+                    <Icons.right />
                   </span>
                   <span className="visually-hidden">Send</span>
                 </div>

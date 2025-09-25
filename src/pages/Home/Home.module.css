@@ -1,8 +1,9 @@
+/* MainVisual */
 .mainVisual {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: url('../../assets/images/main_visual.jpg') no-repeat center/cover;
+  background: url("../../assets/images/main_visual.jpg") no-repeat center/cover;
 }
 
 .leftText,
@@ -80,4 +81,135 @@
   opacity: 1;
   transform: scale(1) translateY(0);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* About */
+.about {
+  padding: 160px 0;
+  display: flex;
+  justify-content: center;
+}
+.about h3 {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  padding-bottom: 48px;
+}
+.about div {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.48px;
+}
+
+/* Custom */
+.custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 0;
+}
+.custom .container {
+  position: relative;
+}
+.custom button {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Commend */
+.commend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 0;
+}
+.commend .container {
+  display: flex;
+  justify-content: space-between;
+}
+.commend h3 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.56px;
+  padding-bottom: 62px;
+}
+.commend p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  padding-bottom: 12px;
+}
+.commend ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 32px;
+}
+.commend ul li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.52;
+}
+.commend ul li::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 12px;
+  background: var(--black);
+}
+.commend .product_area {
+  width: 577px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.commend div {
+  position: relative;
+}
+.commend .been img {
+  width: 228px;
+}
+.commend .been button {
+  position: absolute;
+  top: 50%;
+  left: 174px;
+}
+.commend .dripPot {
+  align-self: flex-end;
+}
+.commend .dripPot img {
+  width: 253px;
+  transform: rotate(-52.267deg);
+}
+.commend .dripPot button {
+  position: absolute;
+  top: 30%;
+  left: 206px;
+}
+.commend .dripper img {
+  width: 236px;
+}
+.commend .dripper button {
+  position: absolute;
+  top: 53%;
+  left: 122px;
+}
+.commend .glassServer img {
+  width: 217px;
+}
+.commend .glassServer button {
+  position: absolute;
+  top: 42%;
+  left: 145px;
 }
