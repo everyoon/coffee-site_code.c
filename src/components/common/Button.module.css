@@ -1,45 +1,64 @@
+/* 공통 스타일 */
 .button {
   border-radius: 32px;
   border: 2px solid var(--black);
   cursor: pointer;
   box-shadow: 5px 5px 15px 0 rgba(32, 32, 32, 0.1);
   transition: all 0.2s ease;
-  background: var(--white);
-  color: var(--black);
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 4px;
+  font-weight: 600;
 }
 
-.button:hover,
-.button:focus {
+/* default 컬러*/
+.default {
+  background: var(--white);
+  color: var(--black);
+}
+.default:hover,
+.default:focus {
   background: var(--black);
   color: var(--white);
 }
-.button:hover .icon path,
-.button:focus .icon path {
+.default:hover .icon path,
+.default:focus .icon path {
   stroke: var(--white);
 }
 
-/* Sizes */
-.small {
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.2;
+/* Primary 컬러 */
+.primary {
+  background: var(--white);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.primary:hover,
+.primary:focus {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+.primary:hover .icon path,
+.primary:focus .icon path {
+  stroke: var(--white);
 }
 
+/* 사이즈 */
+.small {
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 1.2;
+}
 .large {
   padding: 16px 32px;
   font-size: 16px;
-  font-weight: 600;
   line-height: 1.28;
 }
 .small .icon {
   width: 16px;
   height: 16px;
 }
-
 .large .icon {
   width: 18px;
   height: 18px;
