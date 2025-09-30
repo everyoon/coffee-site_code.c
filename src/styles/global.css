@@ -11,6 +11,7 @@
 
 body {
   background: var(--white);
+  color: var(--black);
   font-family: "Gothic A1", Arial, Helvetica, sans-serif;
 }
 .container {

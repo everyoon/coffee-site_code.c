@@ -12,6 +12,7 @@ import ShareIcon from "@assets/icons/icon_share.svg?react";
 import ThumbTackIcon from "@assets/icons/icon_thumbtack.svg?react";
 import TopIcon from "@assets/icons/icon_top.svg?react";
 import CoffeeIcon from "@assets/icons/icon_coffee.svg?react";
+import CookieIcon from "@assets/icons/icon_cookie.svg?react";
 
 export const Icons = {
   top: TopIcon,
@@ -28,4 +29,5 @@ export const Icons = {
   right: RightIcon,
   share: ShareIcon,
   coffee: CoffeeIcon,
+  cookie: CookieIcon,
 };
