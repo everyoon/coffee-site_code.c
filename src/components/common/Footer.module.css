@@ -24,7 +24,6 @@
 }
 .infoBox {
   font-size: 14px;
-  font-weight: 400;
   line-height: 1.2;
   display: flex;
   flex-direction: column;
@@ -109,9 +108,6 @@
   display: flex;
   gap: 16px;
 }
-.copyright {
-  font-weight: 400;
-}
 .linkBox {
   display: flex;
   gap: 16px;
@@ -122,7 +118,7 @@
   gap: 16px;
 }
 .linkBox li::after {
-  content: "";
+  content: '';
   display: block;
   width: 4px;
   height: 4px;

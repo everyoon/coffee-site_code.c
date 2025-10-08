@@ -1,7 +1,9 @@
 .wrap {
   display: flex;
   justify-content: center;
-  background: url(../../assets/images/grid.png) repeat;
+  background-image: linear-gradient(to right, #c5c5c5 1px, transparent 1px),
+    linear-gradient(to bottom, #c5c5c5 1px, transparent 1px);
+  background-size: 25px 25px;
   padding: 160px 0;
 }
 .container {
@@ -41,7 +43,6 @@
 .nav ul li a {
   font-size: 14px;
   line-height: 1.2;
-  font-weight: 400;
 }
 
 .nav ul li a:hover,
@@ -51,12 +52,10 @@
 .quit {
   font-size: 14px;
   line-height: 1.2;
-  font-weight: 400;
   border-bottom: 1px solid var(--white);
 }
 .quit:hover,
 .quit:focus {
-  font-weight: 400;
   border-bottom: 1px solid var(--black);
 }
 
@@ -95,7 +94,6 @@
 .stamp p {
   padding: 12px 16px 4px 16px;
   font-size: 16px;
-  font-weight: 400;
   line-height: 1.28;
   border-bottom: 2px solid var(--black);
 }
@@ -143,7 +141,6 @@ h4 {
   align-items: center;
   color: var(--primary);
   font-size: 18px;
-  font-weight: 400;
   line-height: 1.28;
 }
 .textArea p svg {
@@ -168,7 +165,6 @@ h4 {
 }
 .textArea ul li {
   font-size: 13px;
-  font-weight: 400;
   line-height: 1.2;
   padding-bottom: 4px;
 }
@@ -241,7 +237,6 @@ h4 {
   padding: 4px 16px;
   gap: 24px;
   font-size: 12px;
-  font-weight: 400;
   line-height: 1.2;
 }
 .menus li:first-child {
@@ -261,7 +256,6 @@ h4 {
 }
 .titleInner div p {
   font-size: 13px;
-  font-weight: 400;
   line-height: 1.2;
 }
 .orderContents {
@@ -295,7 +289,6 @@ h4 {
   color: var(--gray);
   text-align: center;
   font-size: 14px;
-  font-weight: 400;
   line-height: 1.2;
 }
 .orderRight table {
@@ -314,7 +307,6 @@ h4 {
   color: var(--gray);
   text-align: center;
   font-size: 14px;
-  font-weight: 400;
   line-height: 1.2;
 }
 .orderRight table tr th span {
@@ -343,6 +335,5 @@ h4 {
 .recentList li a p {
   text-align: center;
   font-size: 12px;
-  font-weight: 400;
   line-height: 1.2;
 }
