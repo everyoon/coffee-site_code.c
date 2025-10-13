@@ -1,0 +1,82 @@
+.container {
+  min-height: 100vh;
+  background: var(--black);
+  color: var(--gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.codeBlock {
+  background: var(--black);
+  padding: 40px 60px;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  font-size: 28px;
+  line-height: 1.7;
+}
+
+.line {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.keyword {
+  color: #569cd6;
+}
+
+.variable {
+  color: #9cdcfe;
+}
+
+.string {
+  color: var(--accent);
+}
+
+.funcName {
+  color: var(--white);
+}
+
+.brace {
+  color: var(--white);
+}
+
+.link {
+  color: var(--secondary);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.indent {
+  padding-left: 24px;
+}
+
+/* 깜빡이는 커서 */
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 22px;
+  background: #569cd6;
+  animation: blink 1s steps(2, start) infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import styles from "./CustomCursor.module.css";
+import React, { useEffect, useRef } from 'react';
+import styles from './CustomCursor.module.css';
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
@@ -23,7 +23,7 @@ const CustomCursor = () => {
       this.scale = 1 - 0.05 * index;
       this.range = width / 2 - (width / 2) * this.scale + 2;
       this.limit = width * 0.75 * this.scale;
-      this.element = document.createElement("span");
+      this.element = document.createElement('span');
       this.element.className = styles.dot;
       this.element.style.transform = `translate(-50%, -50%) scale(${this.scale})`;
 
@@ -41,17 +41,13 @@ const CustomCursor = () => {
 
     draw() {
       if (!idleRef.current || this.index <= sineDots) {
-        this.element.style.transform = `translate(${this.x - 13}px, ${
-          this.y - 13
-        }px) scale(${this.scale})`;
+        this.element.style.transform = `translate(${this.x - 13}px, ${this.y - 13}px) scale(${this.scale})`;
       } else {
         this.angleX += this.anglespeed;
         this.angleY += this.anglespeed;
         this.y = this.lockY + Math.sin(this.angleY) * this.range;
         this.x = this.lockX + Math.sin(this.angleX) * this.range;
-        this.element.style.transform = `translate(${this.x - 13}px, ${
-          this.y - 13
-        }px) scale(${this.scale})`;
+        this.element.style.transform = `translate(${this.x - 13}px, ${this.y - 13}px) scale(${this.scale})`;
       }
     }
 
@@ -88,24 +84,20 @@ const CustomCursor = () => {
     const x = event.clientX;
     const y = event.clientY;
 
-    const header = document.querySelector("header");
-    const footer = document.querySelector("footer");
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
     const cursorEl = cursorRef.current;
 
     // header, footer 영역 확인
     if (
-      (header &&
-        y >= header.getBoundingClientRect().top &&
-        y <= header.getBoundingClientRect().bottom) ||
-      (footer &&
-        y >= footer.getBoundingClientRect().top &&
-        y <= footer.getBoundingClientRect().bottom)
+      (header && y >= header.getBoundingClientRect().top && y <= header.getBoundingClientRect().bottom) ||
+      (footer && y >= footer.getBoundingClientRect().top && y <= footer.getBoundingClientRect().bottom)
     ) {
-      if (cursorEl) cursorEl.style.display = "none";
-      document.body.style.cursor = "auto";
+      if (cursorEl) cursorEl.style.display = 'none';
+      document.body.style.cursor = 'auto';
     } else {
-      if (cursorEl) cursorEl.style.display = "block";
-      document.body.style.cursor = "none";
+      if (cursorEl) cursorEl.style.display = 'block';
+      document.body.style.cursor = 'none';
       mousePositionRef.current.x = x;
       mousePositionRef.current.y = y;
       resetIdleTimer();
@@ -144,9 +136,9 @@ const CustomCursor = () => {
   };
 
   useEffect(() => {
-    document.body.style.cursor = "none";
-    window.addEventListener("mousemove", onMouseMove);
-    window.addEventListener("touchmove", onTouchMove);
+    document.body.style.cursor = 'none';
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('touchmove', onTouchMove);
 
     lastFrameRef.current = Date.now();
     buildDots();
@@ -154,9 +146,9 @@ const CustomCursor = () => {
     requestAnimationFrame(render);
 
     return () => {
-      document.body.style.cursor = "auto";
-      window.removeEventListener("mousemove", onMouseMove);
-      window.removeEventListener("touchmove", onTouchMove);
+      document.body.style.cursor = 'auto';
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('touchmove', onTouchMove);
       clearTimeout(timeoutIDRef.current);
       dotsRef.current.forEach((dot) => dot.destroy());
       dotsRef.current = [];
@@ -165,20 +157,11 @@ const CustomCursor = () => {
 
   return (
     <>
-      <svg style={{ display: "none" }}>
+      <svg style={{ display: 'none' }}>
         <defs>
           <filter id="goo">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="10"
-              result="blur"
-            />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-              result="goo"
-            />
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
             <feComposite in="SourceGraphic" in2="goo" operator="atop" />
           </filter>
         </defs>
