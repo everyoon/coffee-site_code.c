@@ -1,0 +1,24 @@
+.heroSection {
+  background: url(../../assets/images/menu_lab_bg.jpg) no-repeat center/cover;
+  height: 600px;
+  display: flex;
+  padding-bottom: 140px;
+  justify-content: flex-end;
+  padding-left: 62px;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--white);
+}
+.title {
+  font-size: 32px;
+  line-height: 1.2;
+}
+.heroSection p {
+  font-size: 14px;
+  line-height: 1.52;
+}
+.container {
+  padding-top: 120px;
+  padding-bottom: 240px;
+  margin: 0 auto;
+}

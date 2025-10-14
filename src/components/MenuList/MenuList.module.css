@@ -1,0 +1,26 @@
+.menuList {
+  border: 1px solid var(--black);
+}
+.titleWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--black);
+}
+.categoryTitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.56px;
+}
+
+.cardsWrapper {
+  padding: 72px 24px;
+  border-bottom: 1px solid var(--black);
+  display: flex;
+  gap: 72px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

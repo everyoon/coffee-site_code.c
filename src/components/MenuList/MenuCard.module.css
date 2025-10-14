@@ -1,0 +1,42 @@
+.card {
+  width: 325px;
+  cursor: pointer;
+  text-align: center;
+}
+.image {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.nameBox {
+  padding-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+.name_en,
+.name_ko {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.notes {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.noteWord {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1.52;
+  background: var(--black);
+  color: var(--white);
+  font-weight: 700;
+}

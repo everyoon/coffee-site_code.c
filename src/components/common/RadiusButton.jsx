@@ -2,12 +2,16 @@ import { useNavigate } from "react-router-dom";
 import { Icons } from "./Icons";
 import styles from "./RadiusButton.module.css";
 
-const RadiusButton = ({ to = "/", iconName = null }) => {
+const RadiusButton = ({ to, onClick, iconName = null }) => {
   const navigate = useNavigate();
   const IconComponent = iconName ? Icons[iconName] : null;
 
   const handleClick = () => {
-    navigate(to);
+    if (onClick) {
+      onClick();
+    } else if (to) {
+      navigate(to);
+    }
   };
 
   return (

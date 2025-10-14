@@ -1,7 +1,8 @@
-import Header from '../common/Header';
-import Footer from '../common/Footer';
-import styles from './MainLayout.module.css';
-import CustomCursor from '../CustomCursor/CustomCursor';
+import Header from "../common/Header";
+import Footer from "../common/Footer";
+import GoTopButton from "../common/GoTopButton";
+import styles from "./MainLayout.module.css";
+import CustomCursor from "../CustomCursor/CustomCursor";
 
 export default function MainLayout({ children }) {
   return (
@@ -9,6 +10,7 @@ export default function MainLayout({ children }) {
       <Header />
       <CustomCursor />
       <main>{children}</main>
+      <GoTopButton />
       <Footer />
     </div>
   );
