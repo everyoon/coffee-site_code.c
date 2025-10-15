@@ -1,0 +1,32 @@
+main {
+  background: var(--black);
+}
+.container {
+  margin: 0 auto;
+  padding: 140px 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 64px;
+}
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--white);
+}
+.img {
+  display: flex;
+  justify-content: center;
+}
+.img img {
+  max-width: 800px;
+}
+.buttonInner {
+  text-align: center;
+}
+.button {
+  display: inline-block;
+}
